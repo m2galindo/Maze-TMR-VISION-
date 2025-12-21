@@ -19,5 +19,5 @@ model.train(
     label_smoothing=0.1,  # Helps it not be "stubborn" and learn better
     cls=2.0,              # Gives more importance to not confusing H with S or U
     close_mosaic=10,      # At the end trains with real photos
-    name='train4' # Name of the output folder
+    name='train5' # Name of the output folder
 )

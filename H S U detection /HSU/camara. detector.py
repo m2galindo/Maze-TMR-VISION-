@@ -18,8 +18,8 @@ while True:
     # but we compensate with 'agnostic_nms' for more precision.
     results = model.predict(
         frame, 
-        conf=0.25,          # A bit higher for more cleaning
-        iou=0.45,           # Avoids double boxes
+        conf=0.1,          # A bit higher for more cleaning
+        iou=0.0,           # Avoids double boxes
         device='mps',       # My mac gpu 
         imgsz=640,          # We force the training resolution
         agnostic_nms=True,  # To not confuse S with U or H
@@ -37,3 +37,4 @@ cv2.destroyAllWindows()
 
 # python /Users/marcoalejandrogalindo/Downloads/YOLO_HSU/camera_detector.py
 # to run this file i use a venv with ultralytics installed
+# source /Users/marcoalejandrogalindo/venv_yolo/bin/activate
